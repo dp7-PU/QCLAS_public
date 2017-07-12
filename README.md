@@ -22,7 +22,7 @@ https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.3/sip-4.19.3.zip/downlo
 
 Unzip the file and go to the unziped folder and run cmd or powershell or bash, and then excute:
 
-Python configure.py
+python configure.py
 
 Install QCLAS with pip
 -------------------------

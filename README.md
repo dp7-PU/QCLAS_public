@@ -33,3 +33,9 @@ For windows user, open cmd or powershell and then excute:
     pip install .
 
 The program will automatically install other packages.
+
+## Run the program
+
+To run the program, go to ./src folder and run qclasGUI.pyw.
+
+Windows user can create a shortcut for the program.

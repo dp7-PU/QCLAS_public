@@ -14,7 +14,7 @@ Following packages are needed as well:
 5. Statsmodels
 6. PyQt4
 
-##Install PyQt4 first
+## Install PyQt4 first
 
 PyQt4 needs to be installed first before everything else. Download SIP first from:
 
@@ -24,7 +24,7 @@ Unzip the file and go to the unziped folder and run cmd or powershell or bash, a
 
     python configure.py
 
-##Install QCLAS with pip
+## Install QCLAS with pip
 
 To install the package itself, clone the repository or download the tar.gz file in dist folder. Unzip the file and go to the folder.
 

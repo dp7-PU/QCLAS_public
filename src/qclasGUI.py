@@ -20,7 +20,7 @@ from matplotlib.backends.backend_qt4agg import \
     NavigationToolbar2QT as NavigationToolbar
 import specCal
 import dasRead
-from matplotlib.externals import six
+import six
 import matplotlib
 
 
@@ -31,7 +31,6 @@ class mplCanvas(QtGui.QWidget):
         # a figure instance to plot on
         self.figure = plt.figure(figsize=(width, height), dpi=dpi, facecolor=bgcolor)
         self.axes = self.figure.add_subplot(111)
-        self.axes.hold(False)
         self.index = 0
         # this is the Canvas Widget that displays the `figure`
         # it takes the `figure` instance as a parameter to __init__
@@ -684,9 +683,8 @@ class AppWindow(QtGui.QMainWindow):
         self.dasMeas.bslFit(str(self.bslName.text()), bslRng, silent=True,
                             order=int(str(self.bslOrder.text())))
         canvas = self.canvasList[0]
-        canvas.axes.hold(True)
+        canvas.axes.clf()
         canvas.axes.plot(self.dasMeas.bsl)
-        canvas.axes.hold(False)
         canvas.figure.tight_layout()
         canvas.canvas.draw()
         canvas.canvas.updateGeometry()

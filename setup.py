@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     # Application name:
@@ -9,10 +9,13 @@ setup(
 
     # Author
     author='Da Pan',
-    author_mail='dp7@princeton.edu',
 
     # Pacakge
-    packages=['QCLAS']
+    packages=['QCLAS'],
+    package_dir={'QCLAS': 'src'},
+    package_data={'QCLAS': ['data/*.p']},
 
-    #
+    # Dependency
+    setup_requires=['numpy'],
+    install_requires=['scipy', 'matplotlib', 'PyQT4', 'statsmodels']
 )

@@ -237,6 +237,7 @@ def plotDas(ax, results, mode, showTotal=True,
     """
     sumAbsorp = np.zeros(results[0]['nu'].shape)
     sumTrans = np.copy(sumAbsorp) + 1
+    ax.clf()
 
     for idx, result in enumerate(results):
         # resuls is a dict containing gasParameter, nu, and spectrum
@@ -254,8 +255,7 @@ def plotDas(ax, results, mode, showTotal=True,
         elif mode == 'Transmission':
             ax.plot(nu, spectrum, label=strGasParams(gasParams, unitDict))
             sumTrans = sumTrans * spectrum
-        if idx == 0:
-            ax.hold(True)
+
     if mode == 'Absorbance':
         if showTotal:
             ax.plot(nu, sumAbsorp, label='Total')
@@ -279,7 +279,6 @@ def plotDas(ax, results, mode, showTotal=True,
     formatter.set_useOffset(False)
     ax.yaxis.set_major_formatter(formatter)
     ax.xaxis.set_major_formatter(formatter)
-    ax.hold(False)
     plt.tight_layout()
     return 0
 
@@ -513,6 +512,7 @@ def plotWms(ax, results, showTotal=True,
     -------
 
     """
+    ax.clf()
     sumWms = np.zeros(results[0]['nu'].shape)
     for idx, result in enumerate(results):
         nu = result['nu']
@@ -520,8 +520,7 @@ def plotWms(ax, results, showTotal=True,
         gasParams = result['gasParams']
         ax.plot(nu, spectrum, label=strGasParams(gasParams, unitDict))
         sumWms = sumWms + spectrum
-        if idx == 0:
-            ax.hold(True)
+
     if showTotal:
         ax.plot(nu, sumWms, label='Total')
     leg = ax.legend(fontsize=11, loc=2, frameon=False)
@@ -535,7 +534,6 @@ def plotWms(ax, results, showTotal=True,
     ax.set_xlim([nu.min(), nu.max()])
     ax.set_ylabel('WMS ' + str(results[0]['nf']) + 'f (Mod depth: ' + str(
         results[0]['modDepth']) + ' cm$^{-1}$)')
-    ax.hold(False)
 
 
 def generateEtalons(etalonParams):

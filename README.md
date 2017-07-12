@@ -1,8 +1,8 @@
 # QCLAS
 A graphic for spectroscopic analyses for Quantum Cascade Laser-based sensor.
 
-Installation guide:
-
+Installation guide
+---------
 First, QCLAS is written in Python 2.7. A valid version of Python 2 is needed.
 
 Following packages are needed as well:
@@ -13,6 +13,8 @@ Following packages are needed as well:
 4. Matplotlib
 5. Statsmodels
 6. PyQt4
+
+Install PyQt4 first
 -------------------------
 PyQt4 needs to be installed first before everything else. Download SIP first from:
 
@@ -21,6 +23,8 @@ https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.3/sip-4.19.3.zip/downlo
 Unzip the file and go to the unziped folder and run cmd or powershell or bash, and then excute:
 
 Python configure.py
+
+Install QCLAS with pip
 -------------------------
 To install the package itself, clone the repository or download the tar.gz file in dist folder. Unzip the file and go to the folder.
 

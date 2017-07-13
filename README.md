@@ -23,6 +23,10 @@ https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.3/sip-4.19.3.zip/downlo
 Unzip the file and go to the unziped folder and run cmd or powershell or bash, and then excute:
 
     python configure.py
+    
+Download wheel file from:
+
+http://www.lfd.uci.edu/~gohlke/pythonlibs/#pyqt4
 
 ## Install QCLAS with pip
 

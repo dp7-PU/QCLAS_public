@@ -237,7 +237,7 @@ def plotDas(ax, results, mode, showTotal=True,
     """
     sumAbsorp = np.zeros(results[0]['nu'].shape)
     sumTrans = np.copy(sumAbsorp) + 1
-    ax.clf()
+    plt.cla()
 
     for idx, result in enumerate(results):
         # resuls is a dict containing gasParameter, nu, and spectrum
@@ -512,7 +512,7 @@ def plotWms(ax, results, showTotal=True,
     -------
 
     """
-    ax.clf()
+    plt.cla()
     sumWms = np.zeros(results[0]['nu'].shape)
     for idx, result in enumerate(results):
         nu = result['nu']

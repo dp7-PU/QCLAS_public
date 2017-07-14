@@ -5,7 +5,7 @@ setup(
     name='QCLAS',
 
     # Version numbuer:
-    version="0.5.0",
+    version="0.5.1",
 
     # Author
     author='Da Pan',

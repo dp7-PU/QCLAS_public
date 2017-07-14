@@ -5,35 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb6cfe61-84ce-4515-ba73-afb71daed036" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/C2H4.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/C2H4.header" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/C2H4.p" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/CO.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/CO.header" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/CO.p" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/CO2.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/CO2.header" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/CO2.p" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/H2O.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/H2O.header" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/H2O.p" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/H2S.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/H2S.header" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/H2S.p" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/N2O.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/N2O.header" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/N2O.p" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/NH3.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/NH3.header" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/NH3.p" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/O3.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/O3.header" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/O3.p" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Data/sampletab.p" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/QCLAS-0.5.1.tar.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Data/CO2.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Data/CO2.header" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Data/CO2.p" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Data/H2O.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Data/H2O.header" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Data/H2O.p" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/qclasGUI.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/qclasGUI.pyw" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/QCLAS.iml" afterPath="$PROJECT_DIR$/.idea/QCLAS.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gasPropertyWidget.py" afterPath="$PROJECT_DIR$/src/gasPropertyWidget.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mplCanvasWidget.py" afterPath="$PROJECT_DIR$/src/mplCanvasWidget.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/qclasGUI.pyw" afterPath="$PROJECT_DIR$/src/qclasGUI.pyw" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QCLAS.egg-info/PKG-INFO" afterPath="$PROJECT_DIR$/QCLAS.egg-info/PKG-INFO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QCLAS.egg-info/SOURCES.txt" afterPath="$PROJECT_DIR$/QCLAS.egg-info/SOURCES.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/specCal.py" afterPath="$PROJECT_DIR$/src/specCal.py" />
     </list>
     <ignored path="QCLAS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,23 +48,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="specCal.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="specCal.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/specCal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="538" column="34" lean-forward="true" selection-start-line="538" selection-start-column="34" selection-end-line="538" selection-end-column="34" />
+            <state relative-caret-position="173">
+              <caret line="237" column="46" lean-forward="false" selection-start-line="237" selection-start-column="46" selection-end-line="237" selection-end-column="46" />
               <folding>
                 <element signature="e#804#815#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="qclasGUI.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/qclasGUI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="1100" column="0" lean-forward="false" selection-start-line="1100" selection-start-column="0" selection-end-line="1100" selection-end-column="0" />
+              <folding>
+                <element signature="e#278#289#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,8 +95,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="629">
+              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,6 +147,7 @@
       <find>calwms</find>
       <find>laser</find>
       <find>hold</find>
+      <find>clf</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -180,10 +181,11 @@
         <option value="$PROJECT_DIR$/src/Data/__init__.py" />
         <option value="$PROJECT_DIR$/src/__init__.py" />
         <option value="$USER_HOME$/Documents/QCLAS-0.5.0/src/qclasGUI.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/src/qclasGUI.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/qclasGUI.pyw" />
+        <option value="$PROJECT_DIR$/src/qclasGUI.py" />
         <option value="$PROJECT_DIR$/src/specCal.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -206,7 +208,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>Buildout</id>
+            <id>PyCompatibilityInspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -253,7 +255,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -263,7 +265,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistoryKey" value="wms&#9;null&#9;null&#10;fetch&#9;null&#9;null&#10;setcali&#9;null&#9;null&#10;absor&#9;null&#9;null&#10;bslfit&#9;null&#9;null&#10;setCali&#9;null&#9;null&#10;bslFit&#9;null&#9;null&#10;calib&#9;null&#9;null&#10;clone&#9;ACTION&#9;Git.Clone" />
   </component>
@@ -284,43 +286,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.qclasGUI (2)">
-    <configuration default="false" name="qclasGUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="QCLAS" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/qclasGUI.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="gasPropertyWidget" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="QCLAS" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gasPropertyWidget.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.qclasGUI (3)">
     <configuration default="false" name="qclasGUI (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -351,7 +317,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="QCLAS" />
-      <option name="SCRIPT_NAME" value="C:\Users\dpan\PycharmProjects\QCLAS_public\src\qclasGUI.pyw" />
+      <option name="SCRIPT_NAME" value="C:\Users\dpan\PycharmProjects\QCLAS_public\src\qclasGUI.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -370,6 +336,42 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="QCLAS" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/specCal.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="qclasGUI.pyw" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="QCLAS" />
+      <option name="SCRIPT_NAME" value="C:\Users\dpan\PycharmProjects\QCLAS_public\src\qclasGUI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="qclasGUI (3)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="QCLAS" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/qclasGUI.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -472,19 +474,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.qclasGUI" />
-      <item index="1" class="java.lang.String" itemvalue="Python.gasPropertyWidget" />
-      <item index="2" class="java.lang.String" itemvalue="Python.qclasGUI (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.qclasGUI (2)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.specCal (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.qclasGUI (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.qclasGUI (2)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.specCal (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.qclasGUI.pyw" />
+      <item index="4" class="java.lang.String" itemvalue="Python.qclasGUI (3)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.qclasGUI (2)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.qclasGUI (3)" />
         <item index="1" class="java.lang.String" itemvalue="Python.specCal (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.qclasGUI (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.qclasGUI" />
-        <item index="4" class="java.lang.String" itemvalue="Python.gasPropertyWidget" />
+        <item index="2" class="java.lang.String" itemvalue="Python.qclasGUI.pyw" />
+        <item index="3" class="java.lang.String" itemvalue="Python.qclasGUI (2)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.qclasGUI (1)" />
       </list>
     </recent_temporary>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -675,7 +677,14 @@
       <option name="project" value="LOCAL" />
       <updated>1499895912344</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Changed from PyQt4 to PyQt5">
+      <created>1500045344446</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1500045344446</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -745,7 +754,8 @@
     <MESSAGE value="Added unit handler in specCal and associated changes in qclasGUI." />
     <MESSAGE value="Added function to calibrate WMS using DAS." />
     <MESSAGE value="Created public version for sharing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created public version for sharing." />
+    <MESSAGE value="Changed from PyQt4 to PyQt5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed from PyQt4 to PyQt5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -836,14 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/matplotlib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15028">
@@ -859,11 +861,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/qclasGUI.pyw" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="629">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -878,11 +879,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/specCal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="538" column="34" lean-forward="true" selection-start-line="538" selection-start-column="34" selection-end-line="538" selection-end-column="34" />
+        <state relative-caret-position="173">
+          <caret line="237" column="46" lean-forward="false" selection-start-line="237" selection-start-column="46" selection-end-line="237" selection-end-column="46" />
           <folding>
             <element signature="e#804#815#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/qclasGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="1100" column="0" lean-forward="false" selection-start-line="1100" selection-start-column="0" selection-end-line="1100" selection-end-column="0" />
+          <folding>
+            <element signature="e#278#289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

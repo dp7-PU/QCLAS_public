@@ -10,14 +10,8 @@ src/gasPropertyWidget.py
 src/hapi.py
 src/mplCanvasWidget.py
 src/multiCalWms.py
+src/qclasGUI.py
 src/readTxt.py
 src/specCal.py
-src/data/C2H4.p
-src/data/CO.p
 src/data/CO2.p
 src/data/H2O.p
-src/data/H2S.p
-src/data/N2O.p
-src/data/NH3.p
-src/data/O3.p
-src/data/sampletab.p

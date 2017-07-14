@@ -58,9 +58,11 @@
       <file leaf-file-name="qclasGUI.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/qclasGUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="14" lean-forward="false" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="538">
+              <caret line="613" column="65" lean-forward="true" selection-start-line="613" selection-start-column="65" selection-end-line="613" selection-end-column="65" />
+              <folding>
+                <element signature="e#386#397#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,6 +134,8 @@
       <find>hold</find>
       <find>clf</find>
       <find>laserSpec</find>
+      <find>menu</find>
+      <find>error</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -703,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500060867699</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Changed from PyQt4 to PyQt5">
+      <created>1500063378205</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1500063378205</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView">
@@ -717,10 +728,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29895833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23628692" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23628692" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2901099" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23628692" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
@@ -916,9 +928,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/qclasGUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="14" lean-forward="false" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="538">
+          <caret line="613" column="65" lean-forward="true" selection-start-line="613" selection-start-column="65" selection-end-line="613" selection-end-column="65" />
+          <folding>
+            <element signature="e#386#397#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

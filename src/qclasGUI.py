@@ -8,11 +8,13 @@ download lines they need.
 
 
 
-GUI of the program is based on PyQt4.
+GUI of the program is based on PyQt5.
 
 
 
 Da Pan, v-alpha, started on 02/13/2016
+Da Pan, V-0.5.1, changed from PyQt4 to PyQt5.
+Da Pan, V-0.5.2, added function to import experimental spectra.
 
 """
 
@@ -182,13 +184,19 @@ class AppWindow(QtWidgets.QMainWindow):
 
         # Laser setting menu
 
-        loadLaserFile = QtWidgets.QAction('&Load laser config', self)
+        loadLaserFile = QtWidgets.QAction('&Import laser config', self)
 
         loadLaserFile.triggered.connect(self.getLaserConfig)
 
-        self.laserMenu = QtWidgets.QMenu('&Laser Config')
+        LoadExpSpec = QtWidgets.QAction('&Import spectrum', self)
 
-        self.laserMenu.addAction(loadLaserFile)
+        LoadExpSpec.triggered.connect(self.getExpSpec)
+
+        self.importMenu = QtWidgets.QMenu('&Import')
+
+        self.importMenu.addAction(loadLaserFile)
+
+        self.importMenu.addAction(LoadExpSpec)
 
         # Calibration mode menu
 
@@ -208,12 +216,11 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.menuBar().addMenu(self.HapiMenu)
 
-        self.menuBar().addMenu(self.laserMenu)
+        self.menuBar().addMenu(self.importMenu)
 
         self.menuBar().addMenu(self.caliModeMenu)
 
     ##### BLOCK 1: HAPI data management
-
 
 
     def getLaserConfig(self):
@@ -589,6 +596,15 @@ class AppWindow(QtWidgets.QMainWindow):
 
     ##### End of BLOCK 1.
 
+
+    def getExpSpec(self):
+
+        fileName = self.getFileNameDialog()
+
+        try:
+            self.importedSpec = np.genfromtxt(fileName)
+        except:
+            self.showError('Cannot find or read the file!', details='The file should be pure numbers')
 
 
     def setWaveRangeWidget(self):

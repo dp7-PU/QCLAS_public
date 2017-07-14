@@ -16,56 +16,35 @@ Da Pan, v-alpha, started on 02/13/2016
 
 """
 
-
-
 import hapi
 
-
 import numpy as np
-
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 
-
 import os
-
 
 import gasPropertyWidget
 
-
 import matplotlib.pyplot as plt
-
 
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
-
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
-
 
 import specCal
 
-
 import dasRead
 
-
 import six
-
 
 import matplotlib
 
 
-
-
-
-
 class mplCanvas(QtWidgets.QWidget):
-
     def __init__(self, parent=None, width=5, height=4, dpi=100, bgcolor='#ffffff'):
-
         super(mplCanvas, self).__init__(parent)
-
-
 
         # a figure instance to plot on
 
@@ -95,15 +74,11 @@ class mplCanvas(QtWidgets.QWidget):
 
         self.toolbar = NavigationToolbar(self.canvas, self)
 
-
-
         # Just some plotButton connected to `plot` method
 
         self.plotButton = QtWidgets.QPushButton('Plot', parent=self)
 
         self.exportButton = QtWidgets.QPushButton('Export', parent=self)
-
-
 
         # set the layout
 
@@ -112,8 +87,6 @@ class mplCanvas(QtWidgets.QWidget):
         layout.addWidget(self.toolbar)
 
         layout.addWidget(self.canvas)
-
-
 
         buttonHBox = QtWidgets.QHBoxLayout()
 
@@ -126,11 +99,7 @@ class mplCanvas(QtWidgets.QWidget):
         self.setLayout(layout)
 
 
-
-
-
 class AppWindow(QtWidgets.QMainWindow):
-
     def __init__(self, parent=None):
 
         super(AppWindow, self).__init__(parent)
@@ -143,13 +112,9 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.initUI()
 
-
-
     def resizeEvent(self, resizeEvent):
 
         self.updateCanvasGeometry()
-
-
 
     def initUI(self):
 
@@ -181,13 +146,9 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.setCalibFileDialog()
 
-
-
         self.setCentralWidget(self.mainWidget)
 
         self.resize(0.8 * self.scrsz[2], 0.8 * self.scrsz[3])
-
-
 
     def initMenu(self):
 
@@ -209,8 +170,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         listHData.triggered.connect(self.listHData)
 
-
-
         self.HapiMenu = QtWidgets.QMenu('&HITRAN Data', self)
 
         self.HapiMenu.addAction(chHapiDir)
@@ -221,21 +180,15 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.HapiMenu.addAction(listHData)
 
-
-
         # Laser setting menu
 
         loadLaserFile = QtWidgets.QAction('&Load laser config', self)
 
         loadLaserFile.triggered.connect(self.getLaserConfig)
 
-
-
         self.laserMenu = QtWidgets.QMenu('&Laser Config')
 
         self.laserMenu.addAction(loadLaserFile)
-
-
 
         # Calibration mode menu
 
@@ -259,8 +212,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.menuBar().addMenu(self.caliModeMenu)
 
-
-
     ##### BLOCK 1: HAPI data management
 
 
@@ -270,8 +221,6 @@ class AppWindow(QtWidgets.QMainWindow):
         fileName = self.getFileNameDialog()
 
         self.laserSpec = specCal.read_config(fileName)
-
-
 
     def getDasDir(self):
 
@@ -283,8 +232,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.calibDialog.activateWindow()
 
-
-
     def getWmsDir(self):
 
         wmsStr = self.getFileDirDialog()
@@ -294,8 +241,6 @@ class AppWindow(QtWidgets.QMainWindow):
         self.calibDialog.raise_()
 
         self.calibDialog.activateWindow()
-
-
 
     def showCaliMode(self):
 
@@ -308,7 +253,6 @@ class AppWindow(QtWidgets.QMainWindow):
             self.plotTotalCheck.setEnabled(False)
 
             for button in self.numPanel.buttons():
-
                 button.setEnabled(False)
 
             self.setCanvas()
@@ -320,20 +264,15 @@ class AppWindow(QtWidgets.QMainWindow):
             self.plotTotalCheck.setEnabled(True)
 
             for button in self.numPanel.buttons():
-
                 button.setEnabled(True)
 
             self.calibModeWidget.hide()
 
         QtWidgets.QApplication.processEvents()
 
-
-
     def setCalibMode(self):
 
         self.calibModeWidget = QtWidgets.QWidget()
-
-
 
         vBox = QtWidgets.QVBoxLayout()
 
@@ -345,8 +284,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.bslOrder = QtWidgets.QLineEdit()
 
-
-
         bslHBox = QtWidgets.QHBoxLayout()
 
         bslHBox.addWidget(bslLabel)
@@ -356,8 +293,6 @@ class AppWindow(QtWidgets.QMainWindow):
         bslHBox.addWidget(bslOrderLabel)
 
         bslHBox.addWidget(self.bslOrder)
-
-
 
         bslRngLabel = QtWidgets.QLabel('Baseline fit range:')
 
@@ -369,13 +304,9 @@ class AppWindow(QtWidgets.QMainWindow):
 
         bslRngHBox.addWidget(self.bslRng)
 
-
-
         fitButton = QtWidgets.QPushButton('Fit baseline')
 
         fitButton.clicked.connect(self.showBslFit)
-
-
 
         validRngLabel = QtWidgets.QLabel('Valid spec range:')
 
@@ -387,13 +318,9 @@ class AppWindow(QtWidgets.QMainWindow):
 
         validRngBox.addWidget(self.validRng)
 
-
-
         showAbsorbanceButton = QtWidgets.QPushButton('Show absorbance')
 
         showAbsorbanceButton.clicked.connect(self.calcAbsorbance)
-
-
 
         fitSettingBox = QtWidgets.QHBoxLayout()
 
@@ -419,8 +346,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         fitSettingBox.addWidget(fitAbsButton)
 
-
-
         vBox.addLayout(bslHBox)
 
         vBox.addLayout(bslRngHBox)
@@ -433,13 +358,9 @@ class AppWindow(QtWidgets.QMainWindow):
 
         vBox.addLayout(fitSettingBox)
 
-
-
         self.calibModeWidget.setLayout(vBox)
 
         self.calibModeWidget.hide()
-
-
 
     def setCalibFileDialog(self):
 
@@ -449,11 +370,7 @@ class AppWindow(QtWidgets.QMainWindow):
 
         vBox = QtWidgets.QVBoxLayout()
 
-
-
         calibTitle = QtWidgets.QLabel('Calibration setting')
-
-
 
         dasDirHBox = QtWidgets.QHBoxLayout()
 
@@ -470,8 +387,6 @@ class AppWindow(QtWidgets.QMainWindow):
         dasDirHBox.addWidget(self.dasDir)
 
         dasDirHBox.addWidget(dasDirButton)
-
-
 
         dasPrefixHBox = QtWidgets.QHBoxLayout()
 
@@ -491,8 +406,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         dasPrefixHBox.addWidget(self.dasIdxRng)
 
-
-
         wmsDirHBox = QtWidgets.QHBoxLayout()
 
         wmsDirLabel = QtWidgets.QLabel('WMS dir: ')
@@ -509,8 +422,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         wmsDirHBox.addWidget(wmsDirButton)
 
-
-
         wmsPrefixHBox = QtWidgets.QHBoxLayout()
 
         wmsPrefixLabel = QtWidgets.QLabel('DAS prefix')
@@ -521,13 +432,9 @@ class AppWindow(QtWidgets.QMainWindow):
 
         wmsPrefixHBox.addWidget(self.wmsPrefix)
 
-
-
         okButton = QtWidgets.QPushButton('Import data')
 
         okButton.clicked.connect(self.readDasData)
-
-
 
         vBox.addWidget(calibTitle)
 
@@ -541,11 +448,7 @@ class AppWindow(QtWidgets.QMainWindow):
 
         vBox.addWidget(okButton)
 
-
-
         self.calibDialog.setLayout(vBox)
-
-
 
     def readDasData(self):
 
@@ -573,22 +476,16 @@ class AppWindow(QtWidgets.QMainWindow):
 
         canvas.canvas.updateGeometry()
 
-
-
     def getFileNameDialog(self):
 
         fileName = QtWidgets.QFileDialog.getOpenFileName(self)[0]
         return fileName
-
-
 
     def getFileDirDialog(self):
 
         DirName = QtWidgets.QFileDialog.getExistingDirectory(self)
 
         return DirName
-
-
 
     def getGasList(self):
 
@@ -597,8 +494,6 @@ class AppWindow(QtWidgets.QMainWindow):
         hapi.getTableList()
 
         self.gasList.remove('sampletab')
-
-
 
     def setGasListLabel(self):
 
@@ -612,8 +507,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
             self.gasListLabel.setText('Data ready for: ' + ', '.join(self.gasList))
 
-
-
     def setHapiDir(self):
 
         dbDir = self.getFileDirDialog()
@@ -621,7 +514,6 @@ class AppWindow(QtWidgets.QMainWindow):
         hapi.db_begin_pickle(dbDir)
 
         for gas in self.gasList:
-
             hapi.dropTable(gas)
 
         self.gasList = []
@@ -634,21 +526,17 @@ class AppWindow(QtWidgets.QMainWindow):
 
         hapi.tableList()
 
-
-
     def fetchData(self):
 
         inputStr, ok = QtWidgets.QInputDialog.getText(self, 'Add data',
 
-                                                  "Temporarily add data to the database; the data will not be saved." +
+                                                      "Temporarily add data to the database; the data will not be saved." +
 
-                                                  "\nLarge database will slow down loading processes when start the program." +
+                                                      "\nLarge database will slow down loading processes when start the program." +
 
-                                                  "\nTo Save the data, use 'Save HITRAN data'." +
+                                                      "\nTo Save the data, use 'Save HITRAN data'." +
 
-                                                  "\n\nEnter Gas name, min, and max wavenumber separated by ',' (e.g. H2O,1000,2000)")
-
-
+                                                      "\n\nEnter Gas name, min, and max wavenumber separated by ',' (e.g. H2O,1000,2000)")
 
         if ok:
 
@@ -661,7 +549,6 @@ class AppWindow(QtWidgets.QMainWindow):
                     name = hapi.moleculeName(i + 1)
 
                     if name == params[0]:
-
                         M = i + 1
 
                         print M
@@ -694,15 +581,11 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.scrollGasPanel.updateAll()
 
-
-
     def commitHData(self):
 
         hapi.db_commit_pickle()
 
         self.statusBar().showMessage('HITRAN data saved')
-
-
 
     ##### End of BLOCK 1.
 
@@ -757,8 +640,6 @@ class AppWindow(QtWidgets.QMainWindow):
         hbox.setContentsMargins(0, 0, 0, 0)
         self.waveRangeWidget.setLayout(hbox)
 
-
-
     def setSpecWidget(self):
 
         self.specWidget = QtWidgets.QWidget(self.mainWidget)
@@ -806,8 +687,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.specWidget.setLayout(hbox)
 
-
-
     def setLineShapeWidget(self):
 
         self.lineShapeWidget = QtWidgets.QWidget(self.mainWidget)
@@ -829,8 +708,6 @@ class AppWindow(QtWidgets.QMainWindow):
         hbox.setContentsMargins(0, 0, 0, 0)
         self.lineShapeWidget.setLayout(hbox)
 
-
-
     def setNumPanelWidget(self):
 
         self.numPanelWidget = QtWidgets.QWidget()
@@ -845,15 +722,11 @@ class AppWindow(QtWidgets.QMainWindow):
 
         onePanel.clicked.connect(self.setCanvas)
 
-
-
         twoPanel = QtWidgets.QRadioButton(self)
 
         twoPanel.setText('2')
 
         twoPanel.clicked.connect(self.setCanvas)
-
-
 
         fourPanel = QtWidgets.QRadioButton(self)
 
@@ -861,11 +734,7 @@ class AppWindow(QtWidgets.QMainWindow):
 
         fourPanel.clicked.connect(self.setCanvas)
 
-
-
         numLabel = QtWidgets.QLabel('# of panel: ')
-
-
 
         self.plotTotalCheck = QtWidgets.QCheckBox('Plot total')
 
@@ -894,8 +763,6 @@ class AppWindow(QtWidgets.QMainWindow):
         hbox.setContentsMargins(0, 0, 0, 0)
         self.numPanelWidget.setLayout(hbox)
 
-
-
     def setWmsMethodWidget(self):
 
         self.wmsMethodWidget = QtWidgets.QWidget(self.mainWidget)
@@ -917,8 +784,6 @@ class AppWindow(QtWidgets.QMainWindow):
         hbox.setContentsMargins(0, 0, 0, 0)
         self.wmsMethodWidget.setLayout(hbox)
 
-
-
     def setWmsModWidget(self):
 
         self.wmsModWidget = QtWidgets.QWidget(self.mainWidget)
@@ -939,8 +804,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         hbox.setContentsMargins(0, 0, 0, 0)
         self.wmsModWidget.setLayout(hbox)
-
-
 
     def setICutWidget(self):
 
@@ -971,15 +834,11 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.iCutWidget.setLayout(hbox)
 
-
-
     def setLeftColumn(self):
 
         vboxTop = QtWidgets.QVBoxLayout()
 
         vboxBottom = QtWidgets.QVBoxLayout()
-
-
 
         self.scrollGasPanel = gasPropertyWidget.scrollPanel(self.mainWidget,
 
@@ -1001,8 +860,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.setCalibMode()
 
-
-
         vboxBottom.addWidget(self.waveRangeWidget)
 
         vboxBottom.addWidget(self.specWidget)
@@ -1023,13 +880,9 @@ class AppWindow(QtWidgets.QMainWindow):
 
         vboxTop.addWidget(self.scrollGasPanel)
 
-
-
         self.leftTop.setLayout(vboxTop)
 
         self.leftBottom.setLayout(vboxBottom)
-
-
 
     def genUnitDict(self):
 
@@ -1057,11 +910,7 @@ class AppWindow(QtWidgets.QMainWindow):
 
         unitDict['l'] = str(self.scrollGasPanel.lengthUnit.currentText())
 
-
-
         return unitDict
-
-
 
     def setCanvas(self):
 
@@ -1070,7 +919,6 @@ class AppWindow(QtWidgets.QMainWindow):
         self.grid = QtWidgets.QGridLayout()
 
         for canvas in self.canvasList:
-
             self.grid.removeWidget(canvas)
 
             canvas.deleteLater()
@@ -1083,12 +931,9 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.resultList = []
 
-
-
         position = [[1, 0], [2, 0], [1, 1], [2, 1]]
 
         for i in range(numPanel):
-
             canvas = mplCanvas(self, dpi=self.dpi)
 
             canvas.plotButton.clicked.connect(self.calPlot)
@@ -1107,8 +952,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.vboxRight.addLayout(self.grid)
 
-
-
     def chComboWhatPlot(self):
 
         if self.specChecks.checkedId() == 1:
@@ -1126,10 +969,7 @@ class AppWindow(QtWidgets.QMainWindow):
             self.comboWhatPlot.clear()
 
             for i in range(12):
-
                 self.comboWhatPlot.addItem(str(i + 1) + 'f')
-
-
 
     def setFrames(self):
 
@@ -1141,8 +981,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.leftBottom.setTitle('Set plot properties')
 
-
-
         self.right = QtWidgets.QGroupBox(self.mainWidget)
 
         self.right.setTitle('Results')
@@ -1151,15 +989,11 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.right.setLayout(self.vboxRight)
 
-
-
         self.split1 = QtWidgets.QSplitter(QtCore.Qt.Vertical)
 
         self.split1.addWidget(self.leftTop)
 
         self.split1.addWidget(self.leftBottom)
-
-
 
         self.split2 = QtWidgets.QSplitter(QtCore.Qt.Horizontal)
 
@@ -1169,23 +1003,17 @@ class AppWindow(QtWidgets.QMainWindow):
 
         self.split2.setStretchFactor(1, 2)
 
-
-
         hbox = QtWidgets.QHBoxLayout()
 
         hbox.addWidget(self.split2)
 
         self.mainWidget.setLayout(hbox)
 
-
-
     def showError(self, errStr, details):
 
         errBox = QtWidgets.QMessageBox(self)
 
         errBox.setIcon(QtWidgets.QMessageBox.Information)
-
-
 
         errBox.setText(errStr)
 
@@ -1194,8 +1022,6 @@ class AppWindow(QtWidgets.QMainWindow):
         errBox.setWindowTitle('Error message')
 
         errBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
-
-
 
     def calPlot(self):
 
@@ -1319,15 +1145,11 @@ class AppWindow(QtWidgets.QMainWindow):
 
             self.resultList[canvas.index] = wmsResults
 
-
-
         canvas.figure.tight_layout()
 
         canvas.canvas.draw()
 
         canvas.canvas.updateGeometry()
-
-
 
     def exportData(self):
 
@@ -1335,21 +1157,19 @@ class AppWindow(QtWidgets.QMainWindow):
 
         filename, pat = QtWidgets.QFileDialog.getSaveFileName(self, "Export "
 
-                                                                         "data "
+                                                                    "data "
 
-                                                                         "to csv file",
+                                                                    "to csv file",
 
-                                                                   "output.csv",
+                                                              "output.csv",
 
-                                                                   filter=self.tr(
+                                                              filter=self.tr(
 
-                                                                       "CSV "
+                                                                  "CSV "
 
-                                                                       "files (*.csv)"))
+                                                                  "files (*.csv)"))
 
         specCal.csvOutput(filename, self.resultList[canvas.index])
-
-
 
     def showBslFit(self):
 
@@ -1358,7 +1178,6 @@ class AppWindow(QtWidgets.QMainWindow):
         bslRng = []
 
         for rng in rngStrs:
-
             idx = map(int, rng.split(':'))
 
             bslRng.append(slice(idx[0], idx[1]))
@@ -1379,8 +1198,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         canvas.canvas.updateGeometry()
 
-
-
     def calcAbsorbance(self):
 
         validRng = map(int, str(self.validRng.text()).split(':'))
@@ -1397,8 +1214,6 @@ class AppWindow(QtWidgets.QMainWindow):
 
         canvas.canvas.updateGeometry()
 
-
-
     def dasFit(self):
 
         nuMin = float(self.minNu.text())
@@ -1413,19 +1228,12 @@ class AppWindow(QtWidgets.QMainWindow):
 
             self.trate.text())), self.dasMeas.absorbance, nu, silence=False)
 
-
-
-
-
     def updateCanvasGeometry(self):
 
         for canvas in self.canvasList:
-
             canvas.figure.tight_layout()
 
             canvas.canvas.updateGeometry()
-
-
 
     def listHData(self):
 
@@ -1444,7 +1252,6 @@ class AppWindow(QtWidgets.QMainWindow):
         vboxDialog = QtWidgets.QVBoxLayout()
 
         for gas in self.gasList:
-
             nu = np.array(hapi.getColumn(gas, 'nu'))
 
             gasInfo = gas + ' :' + str(nu.min()) + ' to ' + str(nu.max()) + ' cm -1'
@@ -1472,23 +1279,14 @@ class AppWindow(QtWidgets.QMainWindow):
         dialog.show()
 
 
-
-
-
 def resource_path(relative):
-
     if hasattr(sys, "_MEIPASS"):
-
         return os.path.join(sys._MEIPASS, relative)
 
     return os.path.join(relative)
 
 
-
-
-
 def main():
-
     filename = 'defaultSettings.txt'
 
     app = QtWidgets.QApplication(sys.argv)
@@ -1500,10 +1298,5 @@ def main():
     sys.exit(app.exec_())
 
 
-
-
-
 if __name__ == '__main__':
-
     main()
-

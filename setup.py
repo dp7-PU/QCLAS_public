@@ -17,5 +17,5 @@ setup(
 
     # Dependency
     setup_requires=['numpy'],
-    install_requires=['scipy', 'matplotlib', 'PyQt5', 'statsmodels']
+    install_requires=['scipy', 'matplotlib', 'statsmodels']
 )

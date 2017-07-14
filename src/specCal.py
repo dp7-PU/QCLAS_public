@@ -387,11 +387,11 @@ def calWms(gasList, nu, profile, nf, method='Theoretical', laserSpec=None, dNu=N
         nS = fS / fRamp  # number of sample
         ts = np.arange(nS) / fS  # time stamp for samples
 
-        currRamp = (np.linspace(0, aRamp, nS) - aRamp * 0.5) / 1000
-        currMod = 0.5 * aMod * np.sin(2. * np.pi * fMod * ts) / 1000
+        currRamp = (np.linspace(0, aRamp, nS) - aRamp * 0.5) / 1000 * laserCtrlFactor
+        currMod = 0.5 * aMod * np.sin(2. * np.pi * fMod * ts) / 1000 * laserCtrlFactor
 
-        nuRamp = currRamp * tRamp * laserCtrlFactor + central_wavelength
-        nuTotal = nuRamp + currMod * tMod * laserCtrlFactor
+        nuRamp = currRamp * tRamp + central_wavelength
+        nuTotal = nuRamp + currMod * tMod
 
         intensity = (currRamp + currMod) * c2p + laserDC
         intensity[intensity < 0] = 0

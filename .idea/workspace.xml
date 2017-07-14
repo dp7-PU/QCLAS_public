@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eb6cfe61-84ce-4515-ba73-afb71daed036" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/qclasGUI.py" afterPath="$PROJECT_DIR$/src/qclasGUI.py" />
     </list>
     <ignored path="QCLAS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -714,7 +713,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500063378205</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Changed from PyQt4 to PyQt5">
+      <created>1500064417262</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1500064417262</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">

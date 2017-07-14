@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="eb6cfe61-84ce-4515-ba73-afb71daed036" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/qclasGUI.py" afterPath="$PROJECT_DIR$/src/qclasGUI.py" />
     </list>
     <ignored path="QCLAS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +46,8 @@
       <file leaf-file-name="specCal.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/specCal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="904">
-              <caret line="397" column="0" lean-forward="true" selection-start-line="397" selection-start-column="0" selection-end-line="397" selection-end-column="0" />
+            <state relative-caret-position="-244">
+              <caret line="163" column="30" lean-forward="false" selection-start-line="163" selection-start-column="24" selection-end-line="163" selection-end-column="30" />
               <folding>
                 <element signature="e#804#815#0" expanded="true" />
               </folding>
@@ -57,8 +58,8 @@
       <file leaf-file-name="qclasGUI.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/qclasGUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="613" column="65" lean-forward="true" selection-start-line="613" selection-start-column="65" selection-end-line="613" selection-end-column="65" />
+            <state relative-caret-position="419">
+              <caret line="1044" column="50" lean-forward="false" selection-start-line="1044" selection-start-column="50" selection-end-line="1044" selection-end-column="50" />
               <folding>
                 <element signature="e#386#397#0" expanded="true" />
               </folding>
@@ -135,6 +136,9 @@
       <find>laserSpec</find>
       <find>menu</find>
       <find>error</find>
+      <find>self.showErr</find>
+      <find>cannot</find>
+      <find>wmsResu</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -720,7 +724,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500064417262</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Changed from PyQt4 to PyQt5">
+      <created>1500064422126</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1500064422126</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -882,29 +893,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/matplotlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="916" column="0" lean-forward="false" selection-start-line="916" selection-start-column="0" selection-end-line="916" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="119" lean-forward="false" selection-start-line="0" selection-start-column="119" selection-end-line="0" selection-end-column="119" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specCal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="904">
-          <caret line="397" column="0" lean-forward="true" selection-start-line="397" selection-start-column="0" selection-end-line="397" selection-end-column="0" />
-          <folding>
-            <element signature="e#804#815#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -932,10 +925,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/specCal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-244">
+          <caret line="163" column="30" lean-forward="false" selection-start-line="163" selection-start-column="24" selection-end-line="163" selection-end-column="30" />
+          <folding>
+            <element signature="e#804#815#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/matplotlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="916" column="0" lean-forward="false" selection-start-line="916" selection-start-column="0" selection-end-line="916" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/qclasGUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="613" column="65" lean-forward="true" selection-start-line="613" selection-start-column="65" selection-end-line="613" selection-end-column="65" />
+        <state relative-caret-position="419">
+          <caret line="1044" column="50" lean-forward="false" selection-start-line="1044" selection-start-column="50" selection-end-line="1044" selection-end-column="50" />
           <folding>
             <element signature="e#386#397#0" expanded="true" />
           </folding>

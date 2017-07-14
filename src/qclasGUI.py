@@ -602,9 +602,16 @@ class AppWindow(QtWidgets.QMainWindow):
         fileName = self.getFileNameDialog()
 
         try:
-            self.importedSpec = np.genfromtxt(fileName)
+            self.importedSpec = np.genfromtxt(fileName,delimiter=',')
+
+            if len(self.importedSpec.shape) == 1:
+                self.showError('Not enough data!', 'The file should be two columns of numbers (nu and spec).')
+                print 1
+            elif self.importedSpec.shape[1] != 2:
+                self.showError('Invalid data format!', 'The file should be two columns of numbers (nu and spec).')
+
         except:
-            self.showError('Cannot find or read the file!', details='The file should be pure numbers')
+            self.showError('Cannot find or read the file!', 'The file should be two columns of numbers (nu and spec).')
 
 
     def setWaveRangeWidget(self):
@@ -1035,9 +1042,11 @@ class AppWindow(QtWidgets.QMainWindow):
 
         errBox.setDetailedText(details)
 
-        errBox.setWindowTitle('Error message')
+        errBox.setWindowTitle('Something is wrong!')
 
         errBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
+
+        errBox.exec_()
 
     def calPlot(self):
 

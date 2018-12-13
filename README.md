@@ -1,5 +1,5 @@
 # QCLAS
-A graphic for spectroscopic analyses for Quantum Cascade Laser-based sensor.
+A graphic tool based on HAPI for spectroscopic analyses for Quantum Cascade Laser-Based Sensor.
 
 # Installation guide
 
